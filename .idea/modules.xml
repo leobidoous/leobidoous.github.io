@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/omni_mobile_backend.iml" filepath="$PROJECT_DIR$/.idea/omni_mobile_backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../omni_mobile_backend/.idea/omni_mobile_backend.iml" filepath="$PROJECT_DIR$/../omni_mobile_backend/.idea/omni_mobile_backend.iml" />
     </modules>
   </component>
 </project>
