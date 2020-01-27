@@ -118,6 +118,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
+
 JWT_AUTH = {
     'JWT_ENCODE_HANDLER':
         'rest_framework_jwt.utils.jwt_encode_handler',
@@ -132,7 +133,7 @@ JWT_AUTH = {
         'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
 
     'JWT_RESPONSE_PAYLOAD_HANDLER':
-        'rest_framework_jwt.utils.jwt_response_payload_handler',
+        'authentication.utils.jwt_response_payload_handler',
 
     'JWT_SECRET_KEY': os.getenv("SECRET_KEY", "-uhpfb-=5&l!s0h5sn8*(3a^slvqng24z7b$0yt!a8w+2*$m9#"),
     'JWT_GET_USER_SECRET_KEY': None,
@@ -183,9 +184,9 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 # auth
 LOGIN_URL = 'authentication:login'
-# LOGIN_REDIRECT_URL = 'core:home'
-# LOGOUT_URL = 'core:home'
-AUTH_USER_MODEL = 'user.UserModel'
+LOGIN_REDIRECT_URL = 'core:home'
+LOGOUT_URL = 'core:home'
+# AUTH_USER_MODEL = 'user.UserModel'
 
 try:
     from .local_settings import *

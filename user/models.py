@@ -5,7 +5,7 @@ import re
 
 
 # Create your models here.
-class UserModel(AbstractBaseUser, PermissionsMixin):
+class UserModel(models.Model):
     genres = (('M', 'Masculino'),
               ('F', 'Feminino'),
               ('O', 'Outro'))

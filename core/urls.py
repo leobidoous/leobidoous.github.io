@@ -1,4 +1,4 @@
-"""SystemPUB URL Configuration
+"""Omni URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -18,7 +18,6 @@ from django.urls import path, include
 namespace = 'core'
 
 urlpatterns = [
-    # path('', HomeTemplateView.as_view(), name='home'),
     path('', include('authentication.urls')),
     path('', include('user.urls')),
 

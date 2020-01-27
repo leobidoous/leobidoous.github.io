@@ -5,7 +5,7 @@ from .models import UserModel
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = UserModel
-        fields = ['name', 'cpf', 'genre', 'email', 'telephone', 'birth', 'date_joined', 'last_update']
+        fields = ['id', 'name', 'cpf', 'genre', 'email', 'telephone', 'birth', 'date_joined', 'last_update']
 
     # def create(self, validated_data):
     #     pass
