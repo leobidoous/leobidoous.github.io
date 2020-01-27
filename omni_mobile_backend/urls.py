@@ -1,6 +1,5 @@
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
 
 # To add a new path, first import the app:
 # import blog
@@ -12,5 +11,6 @@ from django.urls import path
 
 
 urlpatterns = [
+    path('', include('core.urls')),
     path('admin/', admin.site.urls),
 ]

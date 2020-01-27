@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     # libs
     'widget_tweaks',
     'rest_framework',
+
+    #apps
+    'core',
 ]
 
 MIDDLEWARE = [
