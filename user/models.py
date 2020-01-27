@@ -1,0 +1,31 @@
+from django.db import models
+
+
+# Create your models here.
+class UserModel(models.Model):
+    genres = (('M', 'Masculino'),
+              ('F', 'Feminino'),
+              ('O', 'Outro'))
+
+    name = models.CharField('Nome', max_length=255, blank=False)
+    cpf = models.CharField('CPF', max_length=14, unique=True)
+    genre = models.CharField('Gênero', max_length=10, choices=genres, blank=True)
+    email = models.EmailField('E-mail', unique=True)
+    password = models.CharField("Senha", max_length=255)
+    telephone = models.CharField("Telefone", max_length=14)
+    birth = models.DateTimeField('Nascimento')
+    date_joined = models.DateTimeField('Criado em:', auto_now_add=True)
+    dt_update = models.DateTimeField('Atualizado em:', auto_now=True)
+
+    class Meta:
+        verbose_name = 'Usuário'
+        verbose_name_plural = 'Usuários'
+
+    def __str__(self):
+        return self.name or self.email
+
+    def get_full_name(self):
+        return str(self)
+
+    def get_short_name(self):
+        return str(self).split(" ")[0]
