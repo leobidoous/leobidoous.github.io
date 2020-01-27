@@ -5,13 +5,13 @@ import re
 
 
 # Create your models here.
-class UserModel(models.Model):
+class UserModel(AbstractBaseUser, PermissionsMixin):
     genres = (('M', 'Masculino'),
               ('F', 'Feminino'),
               ('O', 'Outro'))
 
     username = models.CharField(
-        'Username', max_length=30, unique=True, validators=[
+        'Usuário', max_length=30, unique=True, validators=[
             validators.RegexValidator(
                 re.compile('^[\w.@+-]+$'),
                 'Informe um nome de usuário válido. '
