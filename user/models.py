@@ -5,22 +5,11 @@ import re
 
 
 # Create your models here.
-class UserModel(AbstractBaseUser, PermissionsMixin):
+class UserModel(AbstractBaseUser):
     genres = (('M', 'Masculino'),
               ('F', 'Feminino'),
               ('O', 'Outro'))
 
-    username = models.CharField(
-        'Usuário', max_length=30, unique=True, validators=[
-            validators.RegexValidator(
-                re.compile('^[\w.@+-]+$'),
-                'Informe um nome de usuário válido. '
-                'Este valor deve conter apenas letras, números '
-                'e os caracteres: @/./+/-/_ .'
-                , 'invalid'
-            )
-        ], help_text='Um nome curto que será usado para identificá-lo de forma única na plataforma'
-    )
     name = models.CharField('Nome', max_length=255, blank=False)
     cpf = models.CharField('CPF', max_length=14, unique=True)
     genre = models.CharField('Gênero', max_length=10, choices=genres, blank=True)
@@ -33,8 +22,8 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField('Criado em:', auto_now_add=True)
     last_update = models.DateTimeField('Atualizado em:', auto_now=True)
 
-    USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['name', 'cpf', 'genre', 'email', 'telephone', 'birth']
+    USERNAME_FIELD = 'cpf'
+    REQUIRED_FIELDS = ['name', 'genre', 'email', 'telephone', 'birth']
 
     objects = UserManager()
 

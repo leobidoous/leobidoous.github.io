@@ -189,6 +189,6 @@ LOGIN_URL = 'authentication:login'
 AUTH_USER_MODEL = 'user.UserModel'
 
 try:
-    from .local_settings import *
+    from omni_mobile_backend.local_settings import *
 except ImportError:
     pass
