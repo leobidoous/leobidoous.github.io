@@ -9,7 +9,7 @@ class UserModel(AbstractBaseUser):
     genres = (('M', 'Masculino'),
               ('F', 'Feminino'),
               ('O', 'Outro'))
-
+    username = models.CharField('Usuário', max_length=255)
     name = models.CharField('Nome', max_length=255, blank=False)
     cpf = models.CharField('CPF', max_length=14, unique=True)
     genre = models.CharField('Gênero', max_length=10, choices=genres, blank=True)
@@ -19,11 +19,12 @@ class UserModel(AbstractBaseUser):
     birth = models.DateTimeField('Nascimento')
     is_staff = models.BooleanField('Team', default=False)
     is_active = models.BooleanField('Active', default=True)
+    is_superuser = models.BooleanField('Active', default=False)
     date_joined = models.DateTimeField('Criado em:', auto_now_add=True)
     last_update = models.DateTimeField('Atualizado em:', auto_now=True)
 
     USERNAME_FIELD = 'cpf'
-    REQUIRED_FIELDS = ['name', 'genre', 'email', 'telephone', 'birth']
+    REQUIRED_FIELDS = ['username', 'name', 'genre', 'email', 'telephone', 'birth']
 
     objects = UserManager()
 
