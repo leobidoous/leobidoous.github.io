@@ -1,2 +1,2 @@
-release: python manage.py migrate --run-syncdb
+release: python manage.py migrate auth
 web: gunicorn omni_mobile_backend.wsgi --log-file -
