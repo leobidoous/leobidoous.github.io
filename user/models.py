@@ -5,11 +5,12 @@ import re
 
 
 # Create your models here.
-class UserModel(AbstractBaseUser):
+class UserModel(AbstractBaseUser, PermissionsMixin):
     genres = (('M', 'Masculino'),
               ('F', 'Feminino'),
               ('O', 'Outro'))
-    username = models.CharField('Usuário', max_length=255)
+
+    username = models.CharField('Usuário', max_length=255, unique=True)
     name = models.CharField('Nome', max_length=255, blank=False)
     cpf = models.CharField('CPF', max_length=14, unique=True)
     genre = models.CharField('Gênero', max_length=10, choices=genres, blank=True)
