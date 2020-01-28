@@ -64,5 +64,6 @@ target/
 db.sqlite3
 
 omni_mobile_backend/local_settings.py.example
+omni_mobile_backend/local_settings.py
 media/
 staticfiles/
