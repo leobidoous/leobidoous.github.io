@@ -3,17 +3,17 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "index.html": "4bcc40c49c29b3398ff6746c9c2bbf04",
-"/": "4bcc40c49c29b3398ff6746c9c2bbf04",
-"main.dart.js": "fef2777480177a3bcf6b847451379345",
+  "index.html": "2d191ae101f3e99f54f073fe8cf5612e",
+"/": "2d191ae101f3e99f54f073fe8cf5612e",
+"main.dart.js": "ae9026ba82942649099d8048281b4583",
 "favicon.png": "e3bb46dd993998fb4dbb369e8b5edb47",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "15f73b7e8a8209c2206210b3ac8dea1b",
-"assets/AssetManifest.json": "4a073c61f49f96a89905d80e4e3aacbf",
-"assets/NOTICES": "ed4f2557aba9de3e6b3f9c08da11e4f5",
+"assets/AssetManifest.json": "d0173efec4b6b868d4321b7ee2a136c4",
+"assets/NOTICES": "4f932cb44138fe0a11ca7d51fe2f57a1",
 "assets/FontManifest.json": "de3a5ec6340c657102a308dc6ca2894e",
-"assets/packages/omnisaude_chatbot/assets/shared/background_walpaper.jpg": "2072b40d3cd3cadbf1cc8bbafa314585",
+"assets/packages/omnisaude_chatbot/assets/shared/background_walpaper.png": "71abd7809abbb1ff5961c28075c6a82a",
 "assets/packages/omnisaude_chatbot/assets/shared/not_found.png": "05629e3d6b1c76869f5c0f71173a0263",
 "assets/packages/omnisaude_chatbot/assets/avatar/bot.png": "b7e3718f1fec8afb2ee5a20695c96c8c",
 "assets/packages/omnisaude_chatbot/assets/avatar/user.png": "2640c639b550a86c8615941e70f76be0",
